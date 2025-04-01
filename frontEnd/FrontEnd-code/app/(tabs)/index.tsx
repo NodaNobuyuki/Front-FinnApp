@@ -6,7 +6,7 @@ export default function HomeScreen() {
   return (
     <View style={style.container}>
       <ButtonGeneric/>
-      <TextInputGeneric style={iten.caralho} placeholder='email'/>
+      <TextInputGeneric placeholder='email'/>
       <TextInputGeneric placeholder='senha'/>
     </View>
   );
