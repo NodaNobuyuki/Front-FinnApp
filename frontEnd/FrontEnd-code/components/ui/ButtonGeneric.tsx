@@ -1,10 +1,15 @@
 import React from "react";
 import { Button, View, Alert } from "react-native";
 
-const ButtonGeneric = () => (
+
+type ButtonGenericProps = {
+  press: () => void
+}
+
+const ButtonGeneric = ({press}: ButtonGenericProps) => (
   <Button
     title="Click me"
-    onPress={() => Alert.alert("no fim, tu és refem apenas de si mesmo")}
+    onPress={press}
     color="#4CAF50"
   />
 );

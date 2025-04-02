@@ -1,13 +1,21 @@
-import { StyleSheet, View } from 'react-native';
+import { Alert, StyleSheet, View } from 'react-native';
 import ButtonGeneric from '@/components/ui/ButtonGeneric';
 import TextInputGeneric from '@/components/ui/TextInputGeneric';
+import { useState } from 'react';
 
 export default function HomeScreen() {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const handlePress = ()=>{
+          Alert.alert(email)
+      }
   return (
+
     <View style={style.container}>
-      <ButtonGeneric/>
-      <TextInputGeneric placeholder='email'/>
-      <TextInputGeneric placeholder='senha'/>
+      <ButtonGeneric press={handlePress}/>
+      <TextInputGeneric placeholder='email' value={email} typing={setEmail}/>
+      <TextInputGeneric placeholder='senha' value={password} typing={setPassword}/>
     </View>
   );
 }
