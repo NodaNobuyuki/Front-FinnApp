@@ -1,5 +1,7 @@
 import ButtonGeneric from "@/components/ui/ButtonGeneric"
 import TextInputGeneric from "@/components/ui/TextInputGeneric";
+import sendJson from "@/scripts/send-json";
+import enviaBackDados from "@/scripts/send-json";
 import { useState } from "react";
 import { Alert, Button, StyleSheet, View } from "react-native"
 
@@ -10,24 +12,24 @@ const signupScreen = ()=>{
     const [name, setName] = useState("")
 
     const handlePress = ()=>{
-        Alert.alert(email)
+        sendJson({name, email, password})
     }
 
     return (
     <View style={style.container}>
-        <TextInputGeneric placeholder="Insira seu nome" value={name} typing={setName}/>
-        <TextInputGeneric placeholder="Email" value={email} typing={setEmail}/>
-        <TextInputGeneric placeholder="Senha" value={password} typing={setPassword}/>
+        <TextInputGeneric placeholder="Insira seu nome" value={name} typing={setName} password = {false} />
+        <TextInputGeneric placeholder="Email" value={email} typing={setEmail} password = {false} />
+        <TextInputGeneric placeholder="Senha" value={password} typing={setPassword} password = {true}/>
         <ButtonGeneric press={handlePress}/>
     </View>
     ) 
 }
+
 const style = StyleSheet.create({
     container:{
         justifyContent: "center",
         padding: 40
     }
 });
-
 StyleSheet
 export default signupScreen;

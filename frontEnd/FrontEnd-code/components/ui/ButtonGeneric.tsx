@@ -1,5 +1,6 @@
+import enviaBackDados from "@/scripts/send-json";
 import React from "react";
-import { Button, View, Alert } from "react-native";
+import { Button, View, Alert, TextInput } from "react-native";
 
 
 type ButtonGenericProps = {
