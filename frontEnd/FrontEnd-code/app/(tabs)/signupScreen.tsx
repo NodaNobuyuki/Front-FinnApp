@@ -1,7 +1,7 @@
 import ButtonGeneric from "@/components/ui/ButtonGeneric"
 import TextInputGeneric from "@/components/ui/TextInputGeneric";
-import sendJson from "@/scripts/send-json";
-import enviaBackDados from "@/scripts/send-json";
+import sendJson from "@/services/createUser";
+
 import { useState } from "react";
 import { Alert, Button, StyleSheet, View } from "react-native"
 
