@@ -1,4 +1,3 @@
-import axios from "axios";
 import api from "./api";
 
 
@@ -15,7 +14,7 @@ const sendJson = async ({name, email, password}:jsonProps) =>{
 
         const user = createJson({name, email, password})
         try {
-            const response = await api.post("/user", user);
+            const response = await api.post("/users", user);
             console.log("foi")
         } catch(error){
             console.log(error)
@@ -37,7 +36,11 @@ const validationInput = ({ name, email, password }: jsonProps):boolean =>{
 
 const createJson = ({ name, email, password }: jsonProps) => {
     return (
-        JSON.stringify({name, email, password})
+        {
+            name,
+            email,
+            password
+        }
     )
 };
 
