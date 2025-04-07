@@ -1,4 +1,6 @@
+import { emailRegex, nameRegex, passwordRegex } from "@/constants/nameRegex";
 import api from "./api";
+
 
 
 type jsonProps = {
@@ -15,7 +17,7 @@ const sendJson = async ({name, email, password}:jsonProps) =>{
         const user = createJson({name, email, password})
         try {
             const response = await api.post("/users", user);
-            console.log("foi")
+            console.log("resposta do back: " + response.data + "e essa: " + response.headers + "e tambem : " + response.status)
         } catch(error){
             console.log(error)
         }
@@ -27,10 +29,15 @@ const sendJson = async ({name, email, password}:jsonProps) =>{
 }
 
 const validationInput = ({ name, email, password }: jsonProps):boolean =>{
-    if ((name.length>=2) && (email.includes("@") && email.includes(".")) && (password.length>=8)) {
-        return true
-    }else{
+
+    if (!(nameRegex.test(name))){
         return false
+    } else if (!(emailRegex.test(email))){
+        return false
+    }else if(!(passwordRegex.test(password))){
+        return false
+    } else{
+        return true
     }
 }
 
