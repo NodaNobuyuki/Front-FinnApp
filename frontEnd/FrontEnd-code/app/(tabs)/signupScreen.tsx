@@ -12,7 +12,13 @@ const signupScreen = ()=>{
     const [name, setName] = useState("")
 
     const handlePress = ()=>{
-        sendJson({name, email, password})
+
+        const mockUser = {
+            name: "Teste",
+            email: "teste@email.com",
+            password: "senhaForte123!"
+          };
+        sendJson(mockUser)
     }
 
     return (
@@ -29,7 +35,13 @@ const style = StyleSheet.create({
     container:{
         justifyContent: "center",
         padding: 40
+    },
+    textLabel:{
+        color:"black"
+    },
+    errorLabel:{
+        color:"green"
     }
 });
-StyleSheet
+
 export default signupScreen;

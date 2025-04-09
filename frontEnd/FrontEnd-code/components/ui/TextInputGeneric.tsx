@@ -12,7 +12,7 @@ type TextInputGenericProps = {
 
 const TextInputGeneric = ({placeholder, value, typing, password}: TextInputGenericProps) =>(
     <TextInput 
-        style={iten.caralho}
+        style={iten.input}
         placeholder={placeholder}
         value={value}
         onChangeText={typing}
@@ -22,10 +22,10 @@ const TextInputGeneric = ({placeholder, value, typing, password}: TextInputGener
 );
 
 const iten = StyleSheet.create({
-  caralho: {
+  input: {
     borderWidth: 4,
     width:"100%",
-    backgroundColor:"red"
+    backgroundColor:"#EBEBEB"
   }
 })
 
