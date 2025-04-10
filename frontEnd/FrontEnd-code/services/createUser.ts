@@ -1,4 +1,4 @@
-import { emailRegex, nameRegex, passwordRegex } from "@/constants/nameRegex";
+import { emailRegex, nameRegex, passwordRegex } from "@/constants/REGEX"
 import api from "./api";
 
 

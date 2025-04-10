@@ -25,7 +25,8 @@ const iten = StyleSheet.create({
   input: {
     borderWidth: 4,
     width:"100%",
-    backgroundColor:"#EBEBEB"
+    backgroundColor:"#EBEBEB",
+    borderRadius:10
   }
 })
 

@@ -12,8 +12,8 @@ export default function HomeScreen() {
       }
   return (
 
-    <View style={style.container}>
-      <ButtonGeneric press={handlePress}/>
+    <View style={style.header}>
+      <ButtonGeneric press={handlePress} titulo='criar conta'/>
       <TextInputGeneric placeholder='email' value={email} typing={setEmail}/>
       <TextInputGeneric placeholder='senha' value={password} typing={setPassword}/>
     </View>
@@ -21,17 +21,14 @@ export default function HomeScreen() {
 }
 
 const style = StyleSheet.create({
-  container: {
+  header: {
     flex: 1,
     padding: 24,
     alignItems: 'center',
     borderColor:"#1111",
     borderWidth: 4,
+  },
+  footer:{
+    
   }
 });
-
-const iten = StyleSheet.create({
-  caralho: {
-    borderWidth: 4,
-  }
-})
