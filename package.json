@@ -10,8 +10,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^7.3.10",
+    "@react-navigation/native": "7.1.6",
+    "@shopify/react-native-skia": "^2.0.0-next.3",
+    "axios": "1.8.4",
     "react": "19.0.0",
-    "react-native": "0.78.0"
+    "react-native": "0.78.0",
+    "react-native-gesture-handler": "2.25.0",
+    "react-native-reanimated": "3.17.1",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-screens": "4.10.0",
+    "react-native-svg": "15.11.2",
+    "victory-native": "41.16.2"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
